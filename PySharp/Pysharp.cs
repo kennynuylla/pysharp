@@ -23,6 +23,7 @@ namespace PySharp
         }
 
         public void AdicionarArgumento(string argumento) => _argumentosPython.AdicionarArgumento(argumento);
+        public void LimparArgumentos() => _argumentosPython.LimparArgumentos();
 
         public ProcessoDAO Executar(string arquivo)
         {

@@ -18,6 +18,11 @@ namespace PySharp.DAO
             _argumentos.Add(argumento);
         }
 
+        public void LimparArgumentos()
+        {
+            _argumentos = new List<string>();
+        }
+
         public override string ToString()
         {
             var retorno = string.Empty;
