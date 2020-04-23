@@ -1,6 +1,6 @@
 version: "3"
 services:
-    pysharp:
+    devpysharp:
         image: pysharp.dev
         container_name: PySharp.Dev
         volumes:
