@@ -11,22 +11,22 @@ namespace PySharp
         private readonly string _diretórioPython;
         private readonly string _executávelPython;
 
+        private readonly ArgumentosDAO _argumentosPython;
+
         public Pysharp(string diretórioPython, string executávelPython)
         {
             _diretórioPython = diretórioPython;
             _executávelPython = executávelPython;
             
             _processo = new Processo(_diretórioPython, _executávelPython);
+            _argumentosPython = new ArgumentosDAO();
         }
 
-        public void HelloWorld()
-        {
-            var resposta = Executar("hello.py");
-        }
+        public void AdicionarArgumento(string argumento) => _argumentosPython.AdicionarArgumento(argumento);
 
         public ProcessoDAO Executar(string arquivo)
         {
-            return _processo.ExecutarArquivo(arquivo);
+            return _processo.ExecutarArquivo(arquivo, _argumentosPython);
         }
     }
 }

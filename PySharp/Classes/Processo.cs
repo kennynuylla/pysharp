@@ -16,7 +16,7 @@ namespace PySharp.Classes
             _comandoPython = comandoPython;
         }
 
-        public ProcessoDAO ExecutarArquivo(string nome)
+        public ProcessoDAO ExecutarArquivo(string nome, ArgumentosDAO argumentosPython)
         {
             ProcessoDAO retorno = new ProcessoDAO();
             retorno.AlgoErrado = false; //Sou meio paranóico ;-)
@@ -27,7 +27,7 @@ namespace PySharp.Classes
                 {
                     processo.StartInfo = new ProcessStartInfo(_comandoPython) 
                     {
-                        Arguments = _localArquivosPython + nome,
+                        Arguments = $"{_localArquivosPython}{nome} {argumentosPython}",
                         UseShellExecute = false, //Não usar shell
                         RedirectStandardOutput = true, //Redirecionar a saída para o C#
                         RedirectStandardError = true, //Redirecionar os erros para o C# também
