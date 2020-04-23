@@ -4,6 +4,6 @@ namespace PySharp.Interfaces
 {
     public interface IProcesso
     {
-        ProcessoDAO ExecutarArquivo(string Nome); 
+        ProcessoDAO ExecutarArquivo(string Nome, ArgumentosDAO argumentosPython); 
     }
 }
