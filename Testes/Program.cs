@@ -7,7 +7,7 @@ namespace Testes
     {
         static void Main(string[] args)
         {
-            var python = new Pysharp();
+            var python = new Pysharp("/codigo/py/", "python3");
             python.HelloWorld();
         }
     }
