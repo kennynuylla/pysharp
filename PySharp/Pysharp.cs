@@ -1,4 +1,5 @@
 ﻿using System;
+using PySharp.Classes;
 using PySharp.Interfaces;
 
 namespace PySharp
@@ -7,9 +8,14 @@ namespace PySharp
     {
         private readonly IProcesso _processo;
 
-        public Pysharp(IProcesso processo)
+        public Pysharp()
         {
-            _processo = processo;
+            _processo = new Processo("/codigo/py/", "python3");
+        }
+
+        public void HelloWorld()
+        {
+            var resposta = _processo.ExecutarArquivo("hello.py");
         }
     }
 }

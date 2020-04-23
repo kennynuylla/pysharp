@@ -1,4 +1,5 @@
 ﻿using System;
+using PySharp;
 
 namespace Testes
 {
@@ -6,7 +7,8 @@ namespace Testes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var python = new Pysharp();
+            python.HelloWorld();
         }
     }
 }
