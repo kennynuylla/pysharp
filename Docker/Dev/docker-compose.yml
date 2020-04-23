@@ -1,0 +1,8 @@
+version: "3"
+services:
+    pysharp:
+        image: pysharp.dev
+        container_name: PySharp.Dev
+        volumes:
+            - C:\\Users\\mathe\\Desktop\\\Git\\pysharp:/codigo
+        command: tail -f /dev/null
