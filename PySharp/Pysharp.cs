@@ -24,7 +24,7 @@ namespace PySharp
             var resposta = Executar("hello.py");
         }
 
-        private ProcessoDAO Executar(string arquivo)
+        public ProcessoDAO Executar(string arquivo)
         {
             return _processo.ExecutarArquivo(arquivo);
         }
